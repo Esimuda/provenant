@@ -1,0 +1,33 @@
+{
+  "ranAt": "2026-10-22T11:59:23.155Z",
+  "rpc": "http://127.0.0.1:8545",
+  "chainId": 31337,
+  "localStandIn": true,
+  "note": "Hardhat stand-in for pallet-revive. BLOCK opcodes are not rejected here; Provenant does not use them. Not a Portaldot deployment.",
+  "contract": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "deployTx": "0xe380397d12cd693de0af087937b0da009e18329aae5b0a706139fc3c927fb19e",
+  "bytecodeBytes": 1532,
+  "registerTx": "0xa8f5fe08cc7d0185cd5e8e431ea8aa3d80cce9df7ac90159f2bb1bf7e4f8bd8c",
+  "datasetId": "1",
+  "root": "0xda4ce168bfe7bbcae833e7776ba29641a1f519b47474caaeb54de879cbf0dc78",
+  "manifestHash": "0x0c1414408d279b1e9a68642164ac84b21324aab5ed3c36eb4d1ee07b0c3b052b",
+  "deposit": "1000000000000000000",
+  "claimed": "200000000000000000",
+  "expectedClaimed": "200000000000000000",
+  "claims": [
+    {
+      "title": "Pride and Prejudice, opening",
+      "hash": "0x0cb90f5647848b4f452a072797cfb338ef51cae88e5c3118dd17f4a6a074d16c",
+      "royalty": "100000000000000000"
+    },
+    {
+      "title": "A Scandal in Bohemia, opening",
+      "hash": "0x7d36bcc128bbcfe87d75a593a68e342e9b8cbb441a640ce78526fa28523275ad",
+      "royalty": "100000000000000000"
+    }
+  ],
+  "heldOutReverted": true,
+  "author": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "lab": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+  "authorBalance": "10000199038975533570534"
+}

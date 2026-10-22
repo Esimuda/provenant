@@ -1,0 +1,77 @@
+{
+  "probedAt": "2026-10-22T11:55:35.396Z",
+  "chain": "PortaldotV3 Test",
+  "specName": "portaldot-v3",
+  "specVersion": "3002",
+  "ss58": 42,
+  "tokenDecimals": [
+    14
+  ],
+  "tokenSymbol": [
+    "tPOT"
+  ],
+  "block": 145633,
+  "pallets": {
+    "Nfts": "Nfts",
+    "Identity": "Identity",
+    "Vesting": "Vesting",
+    "Utility": "Utility",
+    "Revive": "Revive",
+    "TransactionStorage": "TransactionStorage",
+    "Preimage": "Preimage",
+    "System": "System",
+    "Balances": "Balances",
+    "Contracts": "Contracts"
+  },
+  "palletCount": 69,
+  "minVestedTransfer": "1000000000000000",
+  "nftDeposits": {
+    "collectionDeposit": "100000000000000",
+    "itemDeposit": "10000000000000",
+    "metadataDepositBase": "10000000000000",
+    "attributeDepositBase": "10000000000000"
+  },
+  "registrars": [],
+  "identityShape": [
+    "additional",
+    "display",
+    "legal",
+    "web",
+    "riot",
+    "email",
+    "pgpFingerprint",
+    "image",
+    "twitter"
+  ],
+  "encodings": {
+    "nfts.batchAll mint": {
+      "ok": true,
+      "detail": "451 bytes, fee 5583531317291 (next collection 4)"
+    },
+    "identity.setIdentity": {
+      "ok": true,
+      "detail": "23 bytes, fee 1300644972105"
+    },
+    "transactionStorage.store": {
+      "ok": true,
+      "detail": "708 bytes, fee 8150708923909"
+    },
+    "vesting.vestedTransfer": {
+      "ok": true,
+      "detail": "71 bytes, fee 1780779291891"
+    }
+  },
+  "evm": {
+    "chainId": 420420777,
+    "block": "0x238e1"
+  },
+  "evmChainIdMatches": true,
+  "manifestHash": "0x0c1414408d279b1e9a68642164ac84b21324aab5ed3c36eb4d1ee07b0c3b052b",
+  "note": "Read-only. No extrinsic was submitted. Deployed contract fields stay empty until tPOT is available.",
+  "deployed": {
+    "contract": null,
+    "deployTx": null,
+    "nftTx": null,
+    "manifestTx": null
+  }
+}
