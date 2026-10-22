@@ -1,0 +1,35 @@
+{
+  "name": "provenant",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Turn the AI copyright war into a market. Training-manifest royalties on Portaldot.",
+  "workspaces": [
+    "packages/*",
+    "contracts",
+    "native",
+    "relayer",
+    "web"
+  ],
+  "scripts": {
+    "build:core": "npm run build -w @provenant/core",
+    "build": "npm run build:core && npm run build -w web",
+    "test": "npm run build:core && npm run test -w @provenant/core && npm run test -w @provenant/contracts && npm run test -w @provenant/native",
+    "dev": "npm run build:core && npm run dev -w web",
+    "relayer": "npm run start -w @provenant/relayer",
+    "probe": "npm run probe -w @provenant/native",
+    "compile": "npm run compile -w @provenant/contracts",
+    "verify": "npm run build:core && npm run compile && tsx verify/verify.ts",
+    "verify:offline": "npm run build:core && npm run compile && tsx verify/verify.ts --offline",
+    "e2e:local": "node scripts/e2e-local.mjs",
+    "deploy:evm": "tsx contracts/scripts/deploy.ts",
+    "native": "npm run cli -w @provenant/native --"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
