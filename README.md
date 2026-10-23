@@ -139,15 +139,26 @@ Explorer for native extrinsics: [node-console.portaldot.dev](https://node-consol
 
 ## What’s mocked
 
-- **No testnet deployment yet.** The deployer key and tPOT are not in this environment. Scripts are ready; the chain is not funded.
 - **Exact chunks only.** No MinHash or simhash. A changed comma is a different work.
 - **Identity is self-declared.** Confirmed: `registrars` is `[]`.
 - **No model is trained.** `portaldot-demo-lora` is a name on a manifest, not a fine-tune.
-- **Vesting has not moved tPOT.** The call encodes against the live runtime. Submission waits on `SURI` and 10 tPOT.
 - **Workshop claims do not move money.** The UI says so.
 - **Hardhat is not pallet-revive.** `block.timestamp` works on Hardhat and is reported to revert on revive. `Provenant.sol` does not use it. `OpcodeProbe.sol` does, and it is not in the deploy script.
 - **The relayer is off-chain glue.** Disclosed above. A precompile would delete it.
 - **No in-browser Polkadot extension.** Native calls are encoded by the CLI or `POST /api/native/prepare`. Submission is `npm run native -- … --submit` with `SURI`. MetaMask is the EVM wallet.
+
+## Live on Portaldot V3 (23 Oct 2026)
+
+| | |
+|---|---|
+| Contract | `0xA90e6d28707f7839adEE38C6e711bE703cE96AC9` |
+| Deploy tx | `0x432e3e44f9fff09870be44f42c90187866843cb8cfe3dba5953e05525577dd44` |
+| Chain | `420420777` / `https://test-evm-rpc-v3.portaldot.dev` |
+| Collection | `10` (Austen, Doyle, Shelley Work NFTs) |
+| Dataset | id `1`, Austen + Doyle claimed, Shelley held-out reverted |
+| Vesting | `vesting.vestedTransfer` 10 tPOT over 10,000 blocks |
+
+Full hashes and balances: `evidence/testnet.json`, `evidence/testnet-e2e.json`. Native explorer: [node-console.portaldot.dev](https://node-console.portaldot.dev).
 
 ## Contract notes
 

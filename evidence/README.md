@@ -7,3 +7,5 @@
 `testnet.json` is where the real deploy address and transaction hash go, the moment `npm run deploy:evm` returns. Do not wait. The EVM RPC prunes receipts.
 
 `submitted-hashes.jsonl` and `relayer-events.jsonl` are append-only logs created at runtime and gitignored.
+
+`testnet-e2e.json` is the live register + Austen/Doyle claim + Shelley held-out transcript on Portaldot V3. Keep it next to `testnet.json`.

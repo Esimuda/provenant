@@ -18,3 +18,7 @@ evidence/local-seed.json
 evidence/relayer-events.jsonl
 playwright-report
 test-results
+
+.deployer-address.txt
+.mapped-native.txt
+evidence/testnet-market.json

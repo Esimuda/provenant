@@ -67,11 +67,12 @@
   },
   "evmChainIdMatches": true,
   "manifestHash": "0x0c1414408d279b1e9a68642164ac84b21324aab5ed3c36eb4d1ee07b0c3b052b",
-  "note": "Read-only. No extrinsic was submitted. Deployed contract fields stay empty until tPOT is available.",
+  "note": "Originally read-only probe. deployed.* filled after Portaldot V3 deploy.",
   "deployed": {
-    "contract": null,
-    "deployTx": null,
-    "nftTx": null,
-    "manifestTx": null
+    "contract": "0xA90e6d28707f7839adEE38C6e711bE703cE96AC9",
+    "deployTx": "0x432e3e44f9fff09870be44f42c90187866843cb8cfe3dba5953e05525577dd44",
+    "nftTx": "0x3dda5d0178ef910c80859ae7cc794da307228e351a798d82397501757775d6a4",
+    "manifestTx": "0x53456862e22aef5b376b8bdfab08f4dc2a17c2db700c6597003eddf01dfac567",
+    "note": "Filled after live deploy 23 Oct 2026 WAT. See evidence/testnet.json and testnet-e2e.json."
   }
 }
