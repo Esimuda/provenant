@@ -189,6 +189,59 @@ async function main() {
       if (!probeReport.deployed.contract) skip("testnet contract", "not deployed; tPOT required");
       else pass("testnet contract", probeReport.deployed.contract);
     }
+    const livePath = join(root, "evidence", "testnet.json");
+    const e2ePath = join(root, "evidence", "testnet-e2e.json");
+    if (existsSync(livePath)) {
+      const live = JSON.parse(readFileSync(livePath, "utf8")) as {
+        address: string;
+        hash: string;
+        registerTx?: string;
+        claims?: { hash: string; title: string }[];
+        heldOutReverted?: boolean;
+        liveDataset?: { claimed: string };
+      };
+      try {
+        const url = process.env.PORTALDOT_EVM_RPC || EVM_RPC;
+        const code = (await rpc(url, "eth_getCode", [live.address, "latest"])) as string;
+        if (code !== "0x" && code.length > 10) pass("live code", `${(code.length - 2) / 2} bytes at ${live.address}`);
+        else fail("live code", "empty");
+        const deployTx = await rpc(url, "eth_getTransactionByHash", [live.hash]);
+        if (deployTx) pass("live deploy tx");
+        else fail("live deploy tx", live.hash);
+        if (live.registerTx) {
+          const reg = await rpc(url, "eth_getTransactionByHash", [live.registerTx]);
+          if (reg) pass("live register tx");
+          else fail("live register tx", live.registerTx);
+        }
+        if (live.claims?.length) {
+          let ok = true;
+          for (const claim of live.claims) {
+            const tx = await rpc(url, "eth_getTransactionByHash", [claim.hash]);
+            if (!tx) ok = false;
+          }
+          if (ok) pass("live claim txs", String(live.claims.length));
+          else fail("live claim txs", "missing hash");
+        }
+        if (existsSync(e2ePath)) {
+          const e2e = JSON.parse(readFileSync(e2ePath, "utf8")) as { heldOutReverted: boolean; expectedClaimed: string };
+          const provider = new ethers.JsonRpcProvider(url);
+          const contract = new ethers.Contract(
+            live.address,
+            ["function dataset(uint256) view returns (bytes32,bytes32,address,uint256,uint256)"],
+            provider,
+          );
+          const stored = await contract.dataset(1);
+          if (stored[4].toString() === e2e.expectedClaimed) pass("live claimed", stored[4].toString());
+          else fail("live claimed", `${stored[4]} != ${e2e.expectedClaimed}`);
+          if (e2e.heldOutReverted) pass("live held-out revert");
+          else fail("live held-out revert", "not recorded");
+        }
+      } catch (error) {
+        fail("live testnet", error instanceof Error ? error.message : String(error));
+      }
+    } else {
+      skip("live testnet", "evidence/testnet.json missing");
+    }
   }
 
   const ran = results.filter((item) => item.status !== "skip");

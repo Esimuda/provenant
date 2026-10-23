@@ -1,0 +1,36 @@
+{
+  "ranAt": "2026-10-23T13:19:33.042Z",
+  "rpc": "https://test-evm-rpc-v3.portaldot.dev",
+  "chainId": 420420777,
+  "localStandIn": false,
+  "contract": "0xA90e6d28707f7839adEE38C6e711bE703cE96AC9",
+  "deployTx": "0x432e3e44f9fff09870be44f42c90187866843cb8cfe3dba5953e05525577dd44",
+  "registerTx": "0x70fbc15421de19d8ac197ed65d18433d8b1f15b950d94e90aab02378cbbe113e",
+  "datasetId": "1",
+  "root": "0x6bda978fb73b58888a40998202649197dcf90ce0b160078b66c343ea8dbd03df",
+  "manifestHash": "0x20238c3cf2914d73b1ebc8772ebc17673f727586c6bb6ebf283844e47669294f",
+  "deposit": "1000000000000000000",
+  "claimed": "200000000000000000",
+  "expectedClaimed": "200000000000000000",
+  "claims": [
+    {
+      "title": "Pride and Prejudice, opening",
+      "hash": "0x5a8c9d5989fd59a4e0fdb4ea0e99e67723be66916d82939f41b18b533b364e6f",
+      "royalty": "100000000000000000"
+    },
+    {
+      "title": "A Scandal in Bohemia, opening",
+      "hash": "0x5e925fa20b970f72082385dd58c875c579f417c825ecb1f9c60f47d319a101a9",
+      "royalty": "100000000000000000"
+    }
+  ],
+  "heldOutReverted": true,
+  "heldOutError": "execution reverted (unknown custom error)",
+  "author": "0x104EB403971709e4a13C4c9D9200CAEd2bd78161",
+  "lab": "0x104EB403971709e4a13C4c9D9200CAEd2bd78161",
+  "authorBalanceWei": "15512634130430125855",
+  "collectionId": 10,
+  "mappedNative": "5CS618VVUF6iKfTk7Y9vmNCy7Hm6rDE6eifBUkv2Z7RmZ6ea",
+  "faucetNative": "5C7wX8gktudwFS3sfYdWevA8MJLqKD3z9bX1vY19P3DdbPMD",
+  "note": "Live Portaldot V3 testnet. Author=lab=deployer for solo demo. Shelley held out."
+}

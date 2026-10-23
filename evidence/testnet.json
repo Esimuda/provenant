@@ -1,0 +1,74 @@
+{
+  "deployedAt": "2026-10-23T13:17:16.118Z",
+  "rpc": "https://test-evm-rpc-v3.portaldot.dev",
+  "chainId": 420420777,
+  "local": false,
+  "address": "0xA90e6d28707f7839adEE38C6e711bE703cE96AC9",
+  "hash": "0x432e3e44f9fff09870be44f42c90187866843cb8cfe3dba5953e05525577dd44",
+  "bytes": 1532,
+  "estimatedDepositTpot": {
+    "at_0_06_per_byte": 91.92,
+    "at_0_095_per_byte": 145.54
+  },
+  "note": "Save this file immediately. pallet-revive's eth RPC prunes old receipts.",
+  "e2e": {
+    "registerTx": "0x70fbc15421de19d8ac197ed65d18433d8b1f15b950d94e90aab02378cbbe113e",
+    "datasetId": "1",
+    "claims": [
+      {
+        "title": "Pride and Prejudice, opening",
+        "hash": "0x5a8c9d5989fd59a4e0fdb4ea0e99e67723be66916d82939f41b18b533b364e6f"
+      },
+      {
+        "title": "A Scandal in Bohemia, opening",
+        "hash": "0x5e925fa20b970f72082385dd58c875c579f417c825ecb1f9c60f47d319a101a9"
+      }
+    ],
+    "heldOutReverted": true,
+    "collectionId": 10
+  },
+  "mappedNative": "5CS618VVUF6iKfTk7Y9vmNCy7Hm6rDE6eifBUkv2Z7RmZ6ea",
+  "deployerEvm": "0x104EB403971709e4a13C4c9D9200CAEd2bd78161",
+  "faucetNative": "5C7wX8gktudwFS3sfYdWevA8MJLqKD3z9bX1vY19P3DdbPMD",
+  "fundTx": "0xdb92ac183dd16b5c4db910500d369f1bec3648080974befa80dc792fb14d779f",
+  "identityTx": "0x90554a5f2ad6c5ddf96224632a13f3b5f39e02399328906f98910d9d2420899d",
+  "mintTxs": {
+    "austen": "0x3dda5d0178ef910c80859ae7cc794da307228e351a798d82397501757775d6a4",
+    "doyle": "0xcfbe03b8be0272a60e76c23a0ee5f02c6188b2cc000279f32e59fc93950af969",
+    "shelley": "0xf14d5899d266aae9dda5629e6765ca5f1fa2e7b8f0d2a371398890724cd4f4da"
+  },
+  "collectionId": 10,
+  "manifestTx": "0x53456862e22aef5b376b8bdfab08f4dc2a17c2db700c6597003eddf01dfac567",
+  "registerTx": "0x70fbc15421de19d8ac197ed65d18433d8b1f15b950d94e90aab02378cbbe113e",
+  "datasetId": "1",
+  "claims": [
+    {
+      "title": "Pride and Prejudice, opening",
+      "hash": "0x5a8c9d5989fd59a4e0fdb4ea0e99e67723be66916d82939f41b18b533b364e6f",
+      "royalty": "100000000000000000"
+    },
+    {
+      "title": "A Scandal in Bohemia, opening",
+      "hash": "0x5e925fa20b970f72082385dd58c875c579f417c825ecb1f9c60f47d319a101a9",
+      "royalty": "100000000000000000"
+    }
+  ],
+  "heldOutReverted": true,
+  "vestTx": "0x9dbbbea51e1e3bcb1f0e136cb83cfb993e83759631e317f2f150444af6cc5c3f",
+  "balancesAfter": {
+    "faucetFreeTpot": 262.53037966998266,
+    "mappedFreeTpot": 25.61263413043012,
+    "mappedReservedTpot": 0,
+    "mappedFrozenTpot": 10,
+    "evmWei": "15612634130430125855",
+    "evmTpotApprox": 15.612634130430125
+  },
+  "liveDataset": {
+    "nextId": "1",
+    "root": "0x6bda978fb73b58888a40998202649197dcf90ce0b160078b66c343ea8dbd03df",
+    "lab": "0x104EB403971709e4a13C4c9D9200CAEd2bd78161",
+    "deposit": "1000000000000000000",
+    "claimed": "200000000000000000"
+  },
+  "explorer": "https://node-console.portaldot.dev"
+}
