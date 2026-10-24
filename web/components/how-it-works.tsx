@@ -6,16 +6,16 @@ export function HowItWorks() {
   const finger = fingerprintText(austen.text);
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6" aria-labelledby="how-heading">
-      <h2 id="how-heading" className="font-display text-4xl tracking-tight">How a royalty clears</h2>
+      <h2 id="how-heading" className="font-display text-4xl tracking-tight">Three moves to a payout</h2>
       <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted">
-        Three moves, using the public-domain opening of Pride and Prejudice as the specimen.
+        Real hashes. Real tPOT. Pride and Prejudice as the test subject.
       </p>
       <ol className="mt-10 grid list-none gap-6 p-0 md:grid-cols-3">
         <li className="flex flex-col border border-line bg-white">
           <div className="border-b border-line px-4 py-3">
             <p className="font-display text-3xl leading-none">01</p>
             <h3 className="mt-2 text-base font-medium">Register the work</h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">The browser hashes each paragraph. The native NFT locks the fingerprint and the licence.</p>
+            <p className="mt-1 text-sm leading-relaxed text-muted">Fingerprint it. Mint it. Lock it.</p>
           </div>
           <div className="flex flex-1 flex-col gap-3 p-4">
             {finger.chunks.map((chunk) => (
@@ -31,7 +31,7 @@ export function HowItWorks() {
           <div className="border-b border-line px-4 py-3">
             <p className="font-display text-3xl leading-none">02</p>
             <h3 className="mt-2 text-base font-medium">Publish the manifest</h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">The lab commits the Merkle root and escrows tPOT. The blob goes to transactionStorage.</p>
+            <p className="mt-1 text-sm leading-relaxed text-muted">The lab commits a root and escrows tPOT.</p>
           </div>
           <div className="flex flex-1 flex-col gap-3 p-4 text-sm">
             <p className="text-muted">Model</p>
@@ -49,14 +49,14 @@ export function HowItWorks() {
           <div className="border-b border-line px-4 py-3">
             <p className="font-display text-3xl leading-none">03</p>
             <h3 className="mt-2 text-base font-medium">Prove and get paid</h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">Paste the chapter. The contract checks the leaf and pays the royalty from the deposit.</p>
+            <p className="mt-1 text-sm leading-relaxed text-muted">Paste your chapter. Get paid on the spot.</p>
           </div>
           <div className="flex flex-1 flex-col gap-3 p-4">
             <p className="inline-flex w-fit bg-support px-2 py-1 text-xs font-medium text-white">Included</p>
             <p className="text-sm leading-relaxed text-ink">{finger.chunks[0].text}</p>
             <p className="text-sm text-muted">Royalty</p>
             <p className="font-display text-4xl tracking-tight">{formatTpot(market.royaltyEach)} tPOT</p>
-            <p className="mt-auto text-xs text-muted">Frankenstein’s letter is in the registry and not in this manifest, so it does not pay.</p>
+            <p className="mt-auto text-xs text-muted">Not in the set? No payout. Frankenstein found out.</p>
           </div>
         </li>
       </ol>

@@ -10,6 +10,7 @@ const links = [
   { href: "/publish", label: "Publish" },
   { href: "/check", label: "Check" },
   { href: "/registry", label: "Registry" },
+  { href: "/docs", label: "Docs" },
 ];
 
 export function SiteHeader() {
@@ -28,7 +29,7 @@ export function SiteHeader() {
         </Link>
         <nav aria-label="Primary" className="flex flex-wrap items-center gap-1">
           {links.map((link) => {
-            const active = pathname === link.href;
+            const active = pathname === link.href || pathname.startsWith(link.href + "/");
             return (
               <Link
                 key={link.href}

@@ -120,7 +120,7 @@ export default function CheckPage() {
       <p className="text-xs uppercase tracking-[0.16em] text-muted">Author</p>
       <h1 className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">Was my work used?</h1>
       <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
-        Paste the same chapter you registered. Matching is exact, chunk for chunk. A hit builds the Merkle proof and asks the contract to pay.
+        Paste your chapter. A match pays out instantly.
       </p>
       {!ready ? (
         <div className="mt-8 h-48 animate-pulse bg-white" aria-busy="true" />

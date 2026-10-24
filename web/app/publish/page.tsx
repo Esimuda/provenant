@@ -98,7 +98,7 @@ export default function PublishPage() {
       <p className="text-xs uppercase tracking-[0.16em] text-muted">Lab</p>
       <h1 className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">Publish a training set</h1>
       <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
-        Pick the works, post a deposit, and the Merkle root is the commitment. On Portaldot the bytes of the manifest go to transactionStorage. The root and the deposit go to the contract.
+        Declare your training set. Escrow the royalties. Ship with a clean conscience.
       </p>
       {registry.works.length === 0 ? (
         <div className="mt-10 border border-line bg-white p-6">

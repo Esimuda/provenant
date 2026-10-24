@@ -65,7 +65,7 @@ export default function RegisterPage() {
         <p className="text-xs uppercase tracking-[0.16em] text-muted">Author</p>
         <h1 className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">Register a work</h1>
         <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
-          Fingerprinting happens in the browser. The licence rate is what a lab owes when this work is in a training manifest. Identity on testnet is self-declared: there is no registrar.
+          Set your price. Your text never leaves the browser.
         </p>
         <form className="mt-8 space-y-5" onSubmit={(event) => void onSubmit(event)} noValidate>
           <div className="space-y-2">
